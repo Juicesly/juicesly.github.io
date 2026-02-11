@@ -1,0 +1,68 @@
+/* =========================
+   DIGITAL ART SECTION
+========================= */
+
+.digital-art-page {
+  background: #000;
+}
+
+/* ===== INTRO ===== */
+
+.digital-art-page .section-intro {
+  padding: 120px 64px 80px;
+  text-align: center;
+}
+
+.digital-art-page .section-intro h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  
+}
+
+/* ===== GALLERY ===== */
+
+.digital-gallery {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px 160px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* lots of breathing room */
+}
+
+/* Individual piece */
+
+.digital-piece {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.digital-piece img {
+  width: 100%;
+  max-width: 1100px;   /* keeps it gallery-scale */
+  height: auto;
+  display: block;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .digital-gallery {
+    padding: 0 32px 120px;
+    gap: 80px;
+  }
+
+  .digital-piece img {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}

@@ -1,0 +1,274 @@
+/* =========================
+   LINDEN PERFORMER — PROJECT PAGE
+   Scoped to .linden-project
+========================= */
+
+.linden-project {
+  background-color: #000;
+}
+
+/* ===== HEADER OVERRIDE ===== */
+
+.linden-project .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.linden-project .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 64px;
+}
+
+.linden-project .nav-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.linden-project .nav-back {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+.linden-project .nav-back:hover {
+  color: white;
+}
+
+/* ===== HERO ===== */
+
+.linden-project .project-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 64px;
+  padding: 160px 64px 120px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .linden-project .project-hero {
+    grid-template-columns: 1fr;
+    padding: 120px 32px;
+  }
+}
+
+/* Video framing */
+
+.linden-project .video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.linden-project iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Hero meta */
+
+.linden-project .hero-meta {
+  position: relative;
+}
+
+.linden-project .project-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+
+.linden-project .project-subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.7;
+  max-width: 420px;
+}
+
+/* Laurel */
+
+
+ 
+/* ===== INFO GRID ===== */
+
+.linden-project .project-info {
+  padding: 120px 64px;
+}
+
+.linden-project .info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .linden-project .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.linden-project .info-block h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.linden-project .info-block p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* ===== WRITTEN STATEMENT ===== */
+
+.linden-project .project-statement {
+  padding: 120px 64px;
+}
+
+.linden-project .project-statement h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: 48px;
+}
+
+.linden-project .statement-content {
+  max-width: 760px;
+}
+
+.linden-project .statement-content p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  opacity: 0.75;
+  margin-bottom: 28px;
+}
+
+/* ===== GALLERY ===== */
+
+.linden-project .project-gallery {
+  padding: 120px 64px 160px;
+}
+
+.linden-project .project-gallery h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 48px;
+}
+
+.linden-project .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* force 4 per row */
+  gap: 32px;
+}
+
+.linden-project .gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* ===== FOOTER ===== */
+
+.linden-project .project-footer {
+  padding: 64px;
+  text-align: center;
+}
+
+.linden-project .footer-back {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.6);
+}
+
+.linden-project .footer-back:hover {
+  color: white;
+}
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: -40px; /* pulls the whole block upward */
+  text-align: center;
+}
+
+.project-subtitle {
+  max-width: 420px;
+  margin: 24px auto 24px;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  text-align: center;
+}
+.project-laurel {
+  position: static; /* IMPORTANT */
+  margin: 24px auto 0;
+
+  width: 200px;      /* bigger */
+  opacity: 0.9;      /* more visible */
+}
+/* ===== EXHIBITIONS & AWARDS ===== */
+
+.linden-project .project-exhibitions {
+  padding: 120px 64px;
+}
+
+.linden-project .project-exhibitions h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+.linden-project .exhibitions-list {
+  max-width: 760px;
+  list-style: none;
+  padding: 0;
+}
+
+.linden-project .exhibitions-list li {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  opacity: 0.75;
+  margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+

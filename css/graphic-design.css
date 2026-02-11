@@ -1,0 +1,95 @@
+/* =========================
+   GRAPHIC DESIGN SECTION
+========================= */
+
+.graphic-design-page {
+  background: #000;
+}
+
+/* ===== INTRO ===== */
+
+.section-intro {
+  padding: 120px 64px 80px;
+  text-align: center;
+}
+
+.section-intro h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.graphic-design-page .section-intro h1 {
+  font-family: var(--font-body); /* or whatever font you want */
+}
+
+/* ===== ASYMMETRIC GALLERY ===== */
+
+.asym-gallery {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px 160px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+
+  align-items: start;
+}
+
+/* Neutralize span system for poster layout */
+.asym-gallery .tile {
+  grid-column: span 1 !important;
+  grid-row: auto !important;
+}
+
+
+/* Base tile */
+.tile {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+
+
+.tile img {
+  width: 100%;
+  height: auto;      /* KEY CHANGE */
+  display: block;
+}
+
+
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-6 { grid-column: span 6; }
+
+.span-rows-2 { grid-row: span 2; }
+.span-rows-3 { grid-row: span 3; }
+
+/* Size variants */
+
+.tile--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tile--wide {
+  grid-column: span 2;
+}
+
+.tile--tall {
+  grid-row: span 2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .asym-gallery {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 32px 120px;
+  }
+}
